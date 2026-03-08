@@ -1,0 +1,10 @@
+db:
+  type: postgres
+  host: db
+  port: 5432
+  username: fleet_user
+  password: fleet_pass
+  database: fleetmanager
+  synchronize: false
+  logging: false
+  ssl: false

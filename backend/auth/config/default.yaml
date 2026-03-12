@@ -1,0 +1,53 @@
+jwt:
+  private_secret: |
+    -----BEGIN PRIVATE KEY-----
+    MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrH4+xv7uV9pVb
+    eGKJO1E4n0zHuWVNkllq4R3DSjQI8X7knt1YfkJMejM8QIeEC2yIuPwV0gzG8u/C
+    aO/OojVby4tCmSSjntHLQyIuV1ZtbEf2q4l7c7HYr7ZCFE0kEG5q0taYcC24J7UC
+    1IBx5YbGx6lDgoZ72cKNvQNeC5gVQos0s8AagoLlkdILGnvEW7PbTDtLWMZ92QBM
+    qMm33uTsd3K9P6Ob5HqU/Tb9RzRXxT/WZT5+bPVpGUXAqHykOFvwCdT1UuKhnWxo
+    4L7DT7icY5+SKeyl5dZYLvZm6C9EtfqbwO+iFJBzBu1xAnGwcoI9bAPiHJvRtBGl
+    P6Io/K2RAgMBAAECggEAAN1SxMGwqdMbnwaJ0r016vwWN3KvZpvIXRN5ysolKYfS
+    UGcrfDz9j+I6FWooS8g3aPisczNa/mDnybw4MhufJZluzil6Hi6WizZ0bbu3WiEh
+    mzHToCKl+wUMEz5ZONccKV4gXffASbbqJENfdNaFdqZCNmRfvRsSWinX/TL1lo27
+    6s7Tm/6jLoyerliN68V1NAkKiutJfrAlJZycMD0kdaUx1GAbMR/QaYoYnRwrbYzP
+    XAbtUIx9/knP6TqilIKRgbErM0xL4ZEXcnOXLmC1zzoItOwGcqSHfYh4I7FdA7Wp
+    zy4BSImB6+g5vk4MCrIczxRjiE8yiAhr7auNv2F7gQKBgQDYXX+S34fHAjEb5/QK
+    Wuh+nrIYGGYjaCCQ3rAba0Y138SgFNBcmbHNsso5XjCKkN0pMKkz8XFqf0mhBRQG
+    4hki4Y5hfHT70sj7T20uG57aEHH7ZH8sb94fSSqFT+dxmJ4F9Qh6aDmf3S1VAT5E
+    UJ2pADQjwMP9EJtf883ZoQWFEQKBgQDKeG5G2do0cGCEbFKdCZssvLYKS4PNSkjS
+    11OaM2fmtHAXh1nJNM3DsU5FgwkJ9qjCKNbapiGSlth+WTDFmtVKq5s31bbUqeZb
+    5om9TERV8ANpSlYsV1vOqBaGtb4KJMOVvLCoevq4VrkN4vxd5Xh7uu5erizqBlkC
+    jCL/6WqggQKBgHej49pETmEl/h/POCvNrwftGs+mFjx35KIW8UyIGg/KR4C5YaoC
+    tsXmmln0kmTcy95t8PIvDSb1cbJfC37u4TVfggq39jwVh1snxVicn083jr+TB5t7
+    1Fh6bc+/qlwvJxpmLyT4ovyaIeoCQPsnlLaRzUMD4Zv65d++AdLYbiPxAoGAWtKG
+    9TVIEnnOcdh9foAOoZTNO/T/3JjT7fA1SliA5RZPqd5HQmBzZLMmXzwWU+fXb7EO
+    H+qh6LXNy2+K1zlLMEGmUPeHGgJUmSji5I1PohUWEqcL3LwbLKpt4GOqKbawHX0U
+    6Z6w1Pvh6v7FIgGLeEU0JDiRYTETwHbIRG+aKwECgYEAnuk7QXLV6/O6ypBtGaGe
+    hu1qlhZ9+qLP0AbCocqM1ypt67l5WEO73ey2v9m3+Pb6UFkatOD8rFbpoxi9d0og
+    3NkfUZLUtUFU7WG/CyAaCpvFhfjXMmbMp1EbUea46O8VtMr/Mn+3NK6FMeo4v38E
+    9Kldz68L0RIMQ5ZHDg4rGik=
+    -----END PRIVATE KEY-----
+  public_secret: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqx+Psb+7lfaVW3hiiTtR
+    OJ9Mx7llTZJZauEdw0o0CPF+5J7dWH5CTHozPECHhAtsiLj8FdIMxvLvwmjvzqI1
+    W8uLQpkko57Ry0MiLldWbWxH9quJe3Ox2K+2QhRNJBBuatLWmHAtuCe1AtSAceWG
+    xsepQ4KGe9nCjb0DXguYFUKLNLPAGoKC5ZHSCxp7xFuz20w7S1jGfdkATKjJt97k
+    7HdyvT+jm+R6lP02/Uc0V8U/1mU+fmz1aRlFwKh8pDhb8AnU9VLioZ1saOC+w0+4
+    nGOfkinspeXWWC72ZugvRLX6m8DvohSQcwbtcQJxsHKCPWwD4hyb0bQRpT+iKPyt
+    kQIDAQAB
+    -----END PUBLIC KEY-----
+  expiration_min: 15
+db:
+  type: postgres
+  host: localhost
+  port: 5432
+  username: fleet_user
+  password: fleet_pass
+  database: fleetmanager
+  synchronize: false
+  logging: false
+  ssl: false
+encrypt:
+  saltRounds: 10

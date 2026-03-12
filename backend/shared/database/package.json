@@ -1,0 +1,19 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "dependencies": {
+    "config": "^4.4.1",
+    "pg": "^8.20.0",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.28",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5"
+  }
+}

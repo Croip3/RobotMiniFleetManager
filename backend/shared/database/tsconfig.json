@@ -5,17 +5,11 @@
     // "rootDir": "./src",
     // "outDir": "./dist",
 
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@db/*": ["../shared/database/*"]
-    },
-
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
     "target": "esnext",
-    "types": ["node"],
+    "types": [],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -25,13 +19,15 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "useDefineForClassFields": false,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "useDefineForClassFields": false,
+    "strictPropertyInitialization": false,
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
 
     // Style Options
     // "noImplicitReturns": true,
@@ -49,10 +45,5 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  },
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node"
-  },
-  "include": ["src/**/*.ts", "../shared/**/*.ts"]
+  }
 }

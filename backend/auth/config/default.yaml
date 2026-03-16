@@ -41,7 +41,7 @@ jwt:
   expiration_min: 15
 db:
   type: postgres
-  host: localhost
+  host: db
   port: 5432
   username: fleet_user
   password: fleet_pass

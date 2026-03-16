@@ -1,4 +1,37 @@
 services:
+  auth:
+    build:
+      context: .
+      dockerfile: auth/Dockerfile
+    container_name: auth
+    restart: unless-stopped
+    expose:
+      - "3000"
+    depends_on:
+      db:
+        condition: service_healthy
+  fleet-manager:
+    build:
+      context: .
+      dockerfile: fleetManager/Dockerfile
+    container_name: fleetManager
+    restart: unless-stopped
+    expose:
+      - "3001"
+    depends_on:
+      db:
+        condition: service_healthy
+  # simulation:
+  #   build:
+  #     context: .
+  #     dockerfile: simulation/Dockerfile
+  #   container_name: simulation
+  #   restart: unless-stopped
+  #   expose:
+  #     - "3001"
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
   db:
     image: postgres:16
     container_name: db
@@ -17,6 +50,17 @@ services:
       start_period: 30s
     volumes:
       - db_data:/var/lib/postgresql/data
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - auth
 
 volumes:
   db_data:

@@ -2,8 +2,8 @@ import "reflect-metadata";
 import { DataSource } from "typeorm";
 import type { DataSourceOptions } from "typeorm";
 import type { TypeOrmConfig } from "./types/database.types.js";
-import { Users } from "./entities/Users.ts";
-import { Robots } from "./entities/Robots.ts";
+import { Users } from "./entities/Users.js";
+import { Robots } from "./entities/Robots.js";
 
 
 const buildTypeOrmConfig = (config: TypeOrmConfig): DataSourceOptions => ({

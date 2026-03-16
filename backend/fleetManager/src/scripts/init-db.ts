@@ -1,6 +1,6 @@
 import config from "config";
 import type { TypeOrmConfig } from "../../../shared/database/types/database.types.js";
-import * as bcrypt from 'bcrypt';
+import bcrypt from 'bcrypt';
 import { getDatasource } from "../../../shared/database/datasource.js";
 import { Users } from "../../../shared/database/entities/Users.js";
 import { Robots } from "../../../shared/database/entities/Robots.js";

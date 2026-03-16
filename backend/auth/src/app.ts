@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken'
 import config from "config";
 import { getDatasource } from '../../shared/database/datasource.js'
 import { Users } from '../../shared/database/entities/Users.js'
-import type { TypeOrmConfig } from "../../shared/database/types/database.types.ts";
+import type { TypeOrmConfig } from "../../shared/database/types/database.types.js";
 import bcrypt from 'bcrypt'
 
 import type { Request, Response, NextFunction } from 'express';

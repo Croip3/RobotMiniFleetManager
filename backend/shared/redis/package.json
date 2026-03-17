@@ -1,0 +1,28 @@
+{
+  "name": "@minifleetmanager/shared-redis",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "config": "^4.4.1",
+    "js-yaml": "^4.1.1",
+    "redis": "^5.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

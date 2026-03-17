@@ -50,6 +50,25 @@ services:
       start_period: 30s
     volumes:
       - db_data:/var/lib/postgresql/data
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: >
+      redis-server
+      --appendonly yes
+      --requirepass ${REDIS_PASSWORD}
+    volumes:
+      - redis_data:/data
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
   nginx:
     image: nginx:stable-alpine
     container_name: nginx
@@ -64,3 +83,4 @@ services:
 
 volumes:
   db_data:
+  redis_data:

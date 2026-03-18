@@ -1,14 +1,14 @@
 FROM node:20-alpine
 
-WORKDIR /service/simulation
+WORKDIR /service/simulationDataMocker
 
-COPY ./auth/package*.json ./
+COPY ./simulationDataMocker/package*.json ./
 RUN npm install
 
-COPY ./simulation /service/simulationDataMocker
+COPY ./simulationDataMocker /service/simulationDataMocker
 COPY ./shared /service/shared
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 3002
 
 CMD ["npm", "start"]

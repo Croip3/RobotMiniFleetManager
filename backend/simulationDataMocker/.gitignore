@@ -1,0 +1,3 @@
+/config/local-*
+/dist
+/node_modules

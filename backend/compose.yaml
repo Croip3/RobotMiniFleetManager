@@ -21,17 +21,19 @@ services:
     depends_on:
       db:
         condition: service_healthy
-  # simulation:
-  #   build:
-  #     context: .
-  #     dockerfile: simulation/Dockerfile
-  #   container_name: simulation
-  #   restart: unless-stopped
-  #   expose:
-  #     - "3001"
-  #   depends_on:
-  #     db:
-  #       condition: service_healthy
+  simulation:
+    build:
+      context: .
+      dockerfile: simulationDataMocker/Dockerfile
+    container_name: simulation
+    restart: unless-stopped
+    expose:
+      - "3002"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
   db:
     image: postgres:16
     container_name: db

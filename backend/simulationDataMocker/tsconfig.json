@@ -23,6 +23,6 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force"
   },
-  "include": ["src/**/*.ts", "../shared/**/*.ts", "../auth/src/secureRoute.ts"],
+  "include": ["src/**/*.ts", "../shared/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
